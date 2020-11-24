@@ -6,8 +6,15 @@
 
 gestor::gestor() {}
 
-Pedido* gestor::inicio() {
+int gestor::conteo() {
     this-> contador = 0;
+
+    return contador;
+}
+
+
+void gestor::encolar() {
+
     //Se supone en leer un fichero, por ahora solo crear pedidos
     Pedido pedido1("Ordenador", "Calle Luna", "Junior","REG",4010402104 , 4);
     Pedido pedido2("Teclado", "Calle Barcelona", "Francisco", "NOREG", 552040205020, 9);
@@ -15,17 +22,12 @@ Pedido* gestor::inicio() {
     Pedido pedido4("Monitor", "Calle Alcala", "Adriana", "NOREG", 402492045020,8);
     Pedido pedido5("Iphone 12", "Calle Bravo Murillo", "Roberto", "NOREG", 50205020402, 6);
 
-
-    return &pedido1;
-}
-
-
-void gestor::encolar() {
     //Meter en la cola
-    Pedido* pedido;
-    if (pedido->tipoCliente()){
-        cola_reg.encolar(pedido);
-    } else cola_Noreg.encolar(pedido);
+    tipo_cliente(&pedido1);
+    tipo_cliente(&pedido2);
+    tipo_cliente(&pedido3);
+    tipo_cliente(&pedido4);
+    tipo_cliente(&pedido5);
 
 }
 
@@ -51,15 +53,26 @@ void gestor::clasificar() {
         contador_no_registrados +=1;
     }
 
+    //Llamamos a la función alistar para que ordene y cree la lista final
     alistar();
 
 }
 
 void gestor::alistar() {
-    //Juntar las dos listas de registrados y no registrados para crear una entera
+    //Ordenamos las listas
+    listaRegistrados.ordenar();
+    listaNoRegistrados.ordenar();
+
+    //Juntamos las listas ordenadas en una sola
     listaPedidos = listaRegistrados;
     listaPedidos.juntarListas(listaNoRegistrados);
 
+}
+
+void gestor::tipo_cliente(Pedido* pedido) {
+    if (pedido->tipoCliente()){
+        cola_reg.encolar(pedido);
+    } else cola_Noreg.encolar(pedido);
 }
 
 

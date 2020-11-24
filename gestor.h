@@ -16,11 +16,12 @@ class gestor {
 public:
     gestor();
     ~gestor();
-    Pedido* inicio();
+    int conteo();
     void encolar();
     void clasificar();
     void apilar();
     void alistar();
+    void tipo_cliente(Pedido* pedido);
 
 
 
