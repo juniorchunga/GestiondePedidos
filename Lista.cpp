@@ -7,21 +7,28 @@
 
 using namespace std;
 
-Lista::Lista() {
-    ultimo=NULL;
-}
+Lista::Lista() {}
 
 Lista::~Lista() {
     NodoLista* aux;
     while (ultimo){
         aux=ultimo;
-        ultimo=ultimo->siguiente;
+        ultimo=ultimo ->siguiente;
         delete aux;
     }
 }
 
 void Lista::insertarLista(Pedido *valor) {
-
+    NodoLista* aux;
+    if(vacia()){
+        primero = new NodoLista(valor, NULL);
+        ultimo = primero;
+    }
+    else {
+        aux = new NodoLista(valor, NULL);
+        ultimo -> siguiente = aux;
+        ultimo = aux;
+    }
     cout << "Se ha insertado en la Lista" << endl;
 }
 
@@ -38,9 +45,7 @@ void Lista::deCola_a_Lista(Cola cola) {
 
 bool Lista::vacia() {
     //Comprobar si la lista está vacia
-    if(ultimo == NULL){
-        return true;
-    }
+    return cabeza == NULL;
 }
 
 void Lista::insertarLista_Registrados(Pedido *valor) {
