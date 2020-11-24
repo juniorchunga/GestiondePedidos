@@ -19,7 +19,7 @@ public:
     void insertarLista_Registrados(Pedido* valor);
     void insertarLista_NoRegistrados(Pedido* valor);
     void ordenar();
-    void juntarListas();
+    void juntarListas(Lista lista);
 
 
 

@@ -61,3 +61,28 @@ void Lista::insertarLista_NoRegistrados(Pedido *valor) {
         insertarLista(valor);
     }
 }
+
+void Lista::ordenar() {
+    NodoLista* p = primero;
+    NodoLista* j;
+    while(p != NULL) {
+        j = p->siguiente;
+        while(j != NULL) {
+            if(p->valor->getHora() > j->valor->getHora()) {
+                Pedido* aux = j->valor;
+                j->valor = p->valor;
+                p->valor = aux;
+            }
+            j = j->siguiente;
+        }
+        p = p->siguiente;
+    }
+}
+
+void Lista::juntarListas(Lista lista) {
+    NodoLista* p = lista.primero;
+    while(p != NULL) {
+        this->insertarLista(p->valor);
+        p = p->siguiente;
+    }
+}
