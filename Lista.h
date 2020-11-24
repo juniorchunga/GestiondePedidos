@@ -25,7 +25,8 @@ public:
 
 
 private:
-    NodoLista* primero, ultimo;
+    NodoLista* primero;
+    NodoLista* ultimo;
 };
 
 
