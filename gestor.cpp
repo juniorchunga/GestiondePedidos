@@ -76,5 +76,43 @@ void gestor::tipo_cliente(Pedido* pedido) {
 }
 
 
+void gestor::reiniciar() {
+    if(pilaErroneos.vacia()) {
+    } else {
+        while(!pilaErroneos.vacia()) {
+            pilaErroneos.desapilar();
+
+            if (pilaErroneos.vacia()) cout << "Todos los aficionados han sido borrados de las pilas\n" << endl;
+        }
+    }
+
+    if(cola_reg.esVacia()) {
+    } else {
+        while(!cola_reg.esVacia()) {
+            cola_reg.desencolar();
+
+            if (cola_reg.esVacia()) cout << "Todos los aficionados han sido borrados de las colas" << endl;
+        }
+    }
+
+    if(cola_Noreg.esVacia()) {
+    } else {
+        while(!cola_Noreg.esVacia()) {
+            cola_Noreg.desencolar();
+
+            if (cola_Noreg.esVacia()) cout << "Todos los aficionados han sido borrados de las colas" << endl;
+        }
+    }
+
+    if(listaPedidos.vacia()) {
+    } else {
+        while(!listaPedidos.vacia()) {
+            listaPedidos.quitarLista();
+
+            if (listaPedidos.vacia()) cout << "Todos los aficionados han sido borrados de las colas" << endl;
+        }
+    }
+}
+
 
 gestor::~gestor() {}

@@ -49,9 +49,6 @@ void Pila::verPila() {
     cout << endl;
 }
 
-void Pila::apilarPrioridad(Cola c) {
-
-}
 
 void Pila::dePilaACola(Cola cola){
     Pedido* ped;
@@ -63,4 +60,10 @@ void Pila::dePilaACola(Cola cola){
         apilar(ped);
     }
 
+}
+
+bool Pila::vacia() {
+    if(!ultimo ){
+        return true;
+    } else return false;
 }

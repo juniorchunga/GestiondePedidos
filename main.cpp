@@ -93,7 +93,8 @@ int main() {
 
         cout << "1. Generar pedidos" << endl;
         cout << "2. Gestión de pedidos" << endl;
-        cout << "3. Salir del sistema" << endl;
+        cout << "3. Reiniciar programa" << endl;
+        cout << "4. Salir del sistema" << endl;
 
         cout << endl;
 
@@ -126,6 +127,11 @@ int main() {
                 bucle = true;
                 break;
             case 3:
+                cout << "Reiniciando..." << endl;
+                gestorPrograma.reiniciar();
+                bucle = true;
+                break;
+            case 4:
                 bucle = false;
                 cout << "Saliendo del sistema..." <<endl;
                 cout << endl;

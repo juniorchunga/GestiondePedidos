@@ -22,6 +22,7 @@ public:
     void apilar();
     void alistar();
     void tipo_cliente(Pedido* pedido);
+    void reiniciar();
 
 
 
