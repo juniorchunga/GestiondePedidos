@@ -33,6 +33,7 @@ void Lista::insertarLista(Pedido *valor) {
 }
 
 void Lista::quitarLista() {
+    NodoLista* aux;
 
     cout << "Se ha quitado de la lista" << endl;
 

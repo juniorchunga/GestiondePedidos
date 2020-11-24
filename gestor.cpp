@@ -38,7 +38,7 @@ void gestor::clasificar() {
         valor = cola_reg.desencolar();
         if (valor->datoErroneo()) {
             pilaErroneos.apilar(valor);
-        } else listaPedidos.insertarLista(valor);
+        } else listaRegistrados.insertarLista(valor);
         contador_registrados +=1;
     }
 
@@ -47,9 +47,18 @@ void gestor::clasificar() {
         valor = cola_Noreg.desencolar();
         if (valor->datoErroneo()) {
             pilaErroneos.apilar(valor);
-        } else listaPedidos.insertarLista(valor);
+        } else listaNoRegistrados.insertarLista(valor);
         contador_no_registrados +=1;
     }
+
+    alistar();
+
+}
+
+void gestor::alistar() {
+    //Juntar las dos listas de registrados y no registrados para crear una entera
+    listaPedidos = listaRegistrados;
+    listaPedidos.juntarListas(listaNoRegistrados);
 
 }
 

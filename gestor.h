@@ -29,6 +29,8 @@ private:
     Cola cola_Noreg;
     Pila pilaErroneos;
     Lista listaPedidos;
+    Lista listaRegistrados;
+    Lista listaNoRegistrados;
     Pedido* valor;
     int contador;
 
