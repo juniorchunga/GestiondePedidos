@@ -5,10 +5,12 @@
 #ifndef PRACTICA1_PILA_H
 #define PRACTICA1_PILA_H
 
-
+#include <iostream>
 #include "Pedido.h"
 #include "NodoPila.h"
 #include "Cola.h"
+
+using namespace std;
 
 class Pila {
 public:
