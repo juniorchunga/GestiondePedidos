@@ -133,7 +133,7 @@ int main() {
                 bucle = true;
                  */
                 cout << "Creando pedidos..." << endl;
-                gestorPrograma.inicio();
+                gestorPrograma.conteo();
                 break;
             case 2:
                 cout << "Metiendo los pedidos en la cola..." << endl;
