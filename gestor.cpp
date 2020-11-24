@@ -104,6 +104,7 @@ void gestor::reiniciar() {
         }
     }
 
+    /*
     if(listaPedidos.vacia()) {
     } else {
         while(!listaPedidos.vacia()) {
@@ -112,6 +113,7 @@ void gestor::reiniciar() {
             if (listaPedidos.vacia()) cout << "Todos los aficionados han sido borrados de las colas" << endl;
         }
     }
+     */
 }
 
 
