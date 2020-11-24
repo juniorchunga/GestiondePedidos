@@ -83,24 +83,6 @@ int main() {
     Lista ListaPedidos;
 
 
-    //Creación Pedidos
-    Pedido ped1("Ordenador", "Juan Luis", "Calle Luna 7", "REG", 492059205032, 5);
-    Pedido ped2("Maquina", "Jose Alberto", "Calle Perez 7", "NOREG", 492059205020, 10);
-    Pedido ped3("Mac", "Junior", "Calle Alberto Alcocer 32", "REG", 59204020402, 3);
-    Pedido ped4("Intel", "Cristina", "Plaza Castilla", "", 5020520402, 2);
-
-    //Clasifico e introduzco los pedidos en sus correspondientes colas
-    colaRegistrados.clasificar(&ped1, colaRegistrados, colaNoRegistrados);
-    colaRegistrados.clasificar(&ped2, colaRegistrados, colaNoRegistrados);
-    colaRegistrados.clasificar(&ped3, colaRegistrados, colaNoRegistrados);
-
-
-
-    pilaErroneos.dePilaACola(colaRegistrados);     //Pasamos de cola a pila
-
-    ListaPedidos.insertarLista(&ped1); // Prueba Lista
-
-
     //Menú
     gestor gestorPrograma;
 
