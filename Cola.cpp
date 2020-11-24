@@ -81,3 +81,8 @@ void Cola::clasificar(Pedido *v, Cola cola1, Cola cola2) {
     }
 
 }
+
+
+bool Cola::esVacia() {
+    return ((frente == NULL) && (ultimo == NULL));
+}
