@@ -14,6 +14,7 @@ public:
     bool tipoCliente();
     void leer() const;
     bool datoErroneo();
+    int getTiempo();
 
 
 private:

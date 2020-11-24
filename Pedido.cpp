@@ -47,3 +47,7 @@ bool Pedido::datoErroneo() {
         return true;
     }
 }
+
+int Pedido::getTiempo() {
+    return tiempo;
+}

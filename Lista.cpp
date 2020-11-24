@@ -45,7 +45,7 @@ void Lista::deCola_a_Lista(Cola cola) {
 
 bool Lista::vacia() {
     //Comprobar si la lista está vacia
-    return cabeza == NULL;
+    return primero == NULL;
 }
 
 void Lista::insertarLista_Registrados(Pedido *valor) {
@@ -68,7 +68,7 @@ void Lista::ordenar() {
     while(p != NULL) {
         j = p->siguiente;
         while(j != NULL) {
-            if(p->valor->getHora() > j->valor->getHora()) {
+            if(p->valor->getTiempo() > j->valor->getTiempo()) {
                 Pedido* aux = j->valor;
                 j->valor = p->valor;
                 p->valor = aux;
