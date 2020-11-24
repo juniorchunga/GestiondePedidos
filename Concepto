@@ -1,0 +1,36 @@
+- Práctica EEDD: Simulación gestión pedidos
+    Dos tipos de usuarios: Clientes registrados o clientes no registrados
+    Pedido: Descripción del artículo, nombre del cliente, dirección de entrega, tipo de cliente,
+            numeración de la tarjeta de credito y el tiempo necesario para preparar el envío (aleatorio entre 1 y 10 minutos).
+
+Implementación TAD's:
+    - Pila de pedidos erróneos: Almacenará pedidos con datos incompletos.
+                                Ordenados por clientes: Los registrados arriba, los no abajo.
+                                Antes de eso, se almacena por orden de llegada. (apilar con prioridad)
+    - Dos colas de pedidos en espera: Una para clientes registrados, otra para los que no.
+                                      Se almacenará por orden de llegada.
+    - Lista pedidos a enviar: Almacenará pedidos a enviar, ordenador por tipo de cliente y
+                              y por orden de llegada a la lista.
+
+El programa deberea dar un menú con estas opciones:
+    - Generar: generar o leer pedidos realizados.
+               Se almacenará en las dos colas de pedidos en espera, según se trate de clientes.
+               El número de clientes será entre 10 y 20 clientes.
+    - Gestión de pedidos: 1. Se inserta en la lista de pedidos, tres pedidos de la cola de espera de clientes reg y uno de los no reg.
+                             Antes de esto, se comprueba si no faltan datos o son incorrectos, y si es así van a la pila de pedidos erroneos.
+                          2. Se simula el paso del tiempo y preparación y envío de pedidos.
+                             En cada minuto se comprueba el primer pedido de la lista.
+                             - Si no está preparado, se pasa al siguiente.
+                             - Si está listo:
+                                1. Se escribe en pantalla un mensaje con los datos del pedido, indiciando que se ha enviado.
+                                2. Se elimina de la lista.
+                                3. Se incluye en la lista de pedidos a enviar, un nuevo pedido.
+                                4. Todo finalizará cuando no haya pedidos que enviar.
+
+    - Salir del sistema:
+
+
+Falta contador en el programa, mejorar la parte de Listas, una función en el que ordene listas, colas y pilas,
+
+Comprobar la lectura de ficheros
+Mostrar los pedidos
