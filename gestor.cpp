@@ -134,12 +134,19 @@ void gestor::reiniciar() {      // Reinicia el programa
 
 void gestor::mostrarCola() {
     Cola aux = cola_reg;
+    Cola aux2 = cola_Noreg;
     Pedido* pedido;
-    if (aux.esVacia()) {
+    if (aux.esVacia() && aux2.esVacia()) {
         cout << "No hay pedidos en espera\n";
     } else {
+        cout << "Clientes Registrados\n";
         while (!aux.esVacia()) {
             pedido = aux.desencolar();
+            pedido->leer();
+        }
+        cout << "Clientes No Registrados\n";
+        while (!aux2.esVacia()){
+            pedido = aux2.desencolar();
             pedido->leer();
         }
     }
@@ -153,14 +160,16 @@ void gestor::mostrarPila() {
         cout << "No hay pedidos erroneos\n";
     } else {
         while (!aux.vacia()) {
-            //pedido = aux.desapilar();
+            pedido = aux.desapilar();
             pedido->leer();
         }
     }
 }
 
 void gestor::mostrarLista() {
-
+    if (listaPedidos.vacia()){
+        cout << "No hay pedidos en la lista\n" << endl;
+    }
     cout << "Pedidos: \n";
     listaPedidos.mostrarLista();
 }

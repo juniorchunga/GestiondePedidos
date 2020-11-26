@@ -22,7 +22,7 @@ public:
 
     int cima();
 
-    void desapilar();
+    Pedido* desapilar();
 
     void verPila();
 

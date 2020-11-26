@@ -89,8 +89,9 @@ int main() {
         cout << "3. Mostrar pedidos" << endl;
         cout << "4. Clasificar pedidos" << endl;
         cout << "5. Mostrar pedidos erroneos" << endl;
-        cout << "6. Reiniciar programa" << endl;
-        cout << "7. Salir del sistema" << endl;
+        cout << "6. Mostrar lista pedidos" << endl;
+        cout << "7. Reiniciar programa" << endl;
+        cout << "8. Salir del sistema" << endl;
 
         cout << endl;
 
@@ -144,10 +145,16 @@ int main() {
             case 6:
                 //Reinicia el programa
                 cout << "Reiniciando...\n" << endl;
-                gestorPrograma.reiniciar();
+                gestorPrograma.mostrarLista();
                 bucle = true;
                 break;
             case 7:
+                //Reinicia el programa
+                cout << "Reiniciando...\n" << endl;
+                gestorPrograma.reiniciar();
+                bucle = true;
+                break;
+            case 8:
                 //Salida del programa
                 cout << "Saliendo del sistema...\n" << endl;
                 cout << endl;
