@@ -75,12 +75,6 @@ int main() {
     }
 */
 
-    //Creación Colas, Pilas y Listas necesarias
-    Cola colaRegistrados;
-    Cola colaNoRegistrados;
-    Pila pilaErroneos;
-    Lista ListaPedidos;
-
 
     //Menú
     gestor gestorPrograma;

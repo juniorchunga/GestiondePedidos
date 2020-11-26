@@ -132,10 +132,9 @@ void gestor::reiniciar() {      // Reinicia el programa
 }
 
 
-void gestor::mostrarCola() {
-    Cola aux = cola_reg;
-    //Cola aux2 = cola_Noreg;
-    Pedido *pedido;
+void gestor::mostrarCola(Cola aux) {
+
+    Pedido* pedido;
     if (aux.esVacia()) {
         cout << "No hay pedidos en espera\n";
     } else {
