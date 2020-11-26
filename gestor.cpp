@@ -10,7 +10,7 @@ Pedido pedido1("Ordenador", "Calle Luna", "Junior", "REG", 4010402104, 4);
 Pedido pedido2("Teclado", "Calle Barcelona", "Francisco", "NOREG", 552040205020, 9);
 Pedido pedido3("Ordenador Dell", "Calle Preciados", "Alberto", "REG", 30502050250, 5);
 Pedido pedido4("Monitor", "Calle Alcala", "Adriana", "NOREG", 402492045020, 8);
-Pedido pedido5("Iphone 12", "", "Roberto", "NOREG", 50205020402, 6);
+Pedido pedido5("Iphone 12", "Paseo de la Dirección", "Roberto", "NOREG", 50205020402, 6);
 Pedido pedido6("Ipad", "Calle Recoletos 5", "Pedro Sanchez", "NOREG", 6038295020502, 7);
 Pedido pedido7("Apple Watch Series 6", "Calle Nuestra Sr. Fátima", "Maria del Carmen", "REG", 502950205204502, 3);
 Pedido pedido8("Televisión Smart TV LG", "Plaza de Castilla", "Mia", "NOREG", 23104929059203, 9);
@@ -72,6 +72,7 @@ void gestor::clasificar() {
         } else listaNoRegistrados.insertarLista(valor);
         //contador_no_registrados += 1;
     }
+    cout << endl;
 
     //Llamamos a la función alistar para que ordene y cree la lista final
     alistar();
@@ -128,7 +129,7 @@ void gestor::reiniciar() {      // Reinicia el programa
     } else {
         while(!listaPedidos.vacia()) {
             listaPedidos.quitarLista();
-            if (listaPedidos.vacia()) cout << "Todos los aficionados han sido borrados de las colas" << endl;
+            if (listaPedidos.vacia()) cout << "Todos los aficionados han sido borrados de las colas\n" << endl;
         }
     }
 }
