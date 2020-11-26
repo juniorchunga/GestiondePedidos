@@ -49,7 +49,7 @@ Pedido* Cola::desencolar()
     } else {
         frente = aux -> siguiente;
         aux2 = aux ->valor;
-        delete(aux);
+        //delete(aux);
         if (!frente) ultimo=NULL;
     }
     return aux2;

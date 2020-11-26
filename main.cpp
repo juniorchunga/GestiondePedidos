@@ -144,7 +144,7 @@ int main() {
                 break;
             case 6:
                 //Reinicia el programa
-                cout << "Reiniciando...\n" << endl;
+                cout << "Mostrando pedidos...\n" << endl;
                 gestorPrograma.mostrarLista();
                 bucle = true;
                 break;
