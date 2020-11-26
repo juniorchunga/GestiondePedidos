@@ -35,7 +35,7 @@ public:
 
     void mostrarPila();
 
-    //void mostrarLista();
+    void mostrarLista();
 
 
 private:

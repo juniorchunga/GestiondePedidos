@@ -159,5 +159,11 @@ void gestor::mostrarPila() {
     }
 }
 
+void gestor::mostrarLista() {
+
+    cout << "Pedidos: \n";
+    listaPedidos.mostrarLista();
+}
+
 
 gestor::~gestor() {}

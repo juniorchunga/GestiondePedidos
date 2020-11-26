@@ -20,6 +20,7 @@ public:
     void insertarLista_NoRegistrados(Pedido* valor);
     void ordenar();
     void juntarListas(Lista lista);
+    void mostrarLista();
 
 
 

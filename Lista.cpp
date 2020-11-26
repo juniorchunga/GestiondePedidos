@@ -86,3 +86,13 @@ void Lista::juntarListas(Lista lista) {
         p = p->siguiente;
     }
 }
+
+void Lista::mostrarLista() {
+    NodoLista* aux;
+    aux = primero;
+    while(aux) {
+        (aux->valor)->leer();
+        aux = aux->siguiente;
+    }
+    cout << endl;
+}
