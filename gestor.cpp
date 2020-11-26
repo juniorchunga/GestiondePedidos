@@ -159,7 +159,5 @@ void gestor::mostrarPila() {
     }
 }
 
-void gestor::mostrarLista() {}
-
 
 gestor::~gestor() {}

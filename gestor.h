@@ -24,8 +24,6 @@ public:
 
     void clasificar();
 
-    void apilar();
-
     void alistar();
 
     void tipo_cliente(Pedido *pedido);
@@ -37,7 +35,7 @@ public:
 
     void mostrarPila();
 
-    void mostrarLista();
+    //void mostrarLista();
 
 
 private:
