@@ -33,7 +33,7 @@ public:
     void reiniciar();
 
     // Comprobaciones
-    void mostrarCola(Cola aux);
+    void mostrarCola();
 
     void mostrarPila();
 
