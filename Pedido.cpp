@@ -27,8 +27,8 @@ int Pedido::tiempoAleatorio(int tiempo) {
 }
 */
 
-void Pedido::leer() const {
-    cout << "Descripción: " << descripcion << ", Nombre: " << nombre << ", tiempo: " << tiempo << endl;
+void Pedido::leer() {
+    cout << "Pedido: " << descripcion << ", Cliente: " << nombre << ", Dirección: " << direccion << ", tiempo de duración: " << tiempo << endl;
 
 }
 

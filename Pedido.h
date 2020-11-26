@@ -12,7 +12,7 @@ public:
     Pedido(string descripcion, string nombre, string direccion, string tipo_cliente, long num_tarjeta, int tiempo);
 
     bool tipoCliente();
-    void leer() const;
+    void leer();
     bool datoErroneo();
     int getTiempo();
 
