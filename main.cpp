@@ -125,7 +125,7 @@ int main() {
                 bucle = true;
                 break;
             case 3:
-                // Muestra los pedidos de la cola (por ahora solo de los cliente registrados)
+                // Muestra los pedidos de la cola
                 cout << "Mostrando pedidos en espera...\n" << endl;
                 gestorPrograma.mostrarCola();
                 bucle = true;

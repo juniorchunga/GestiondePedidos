@@ -144,6 +144,7 @@ void gestor::mostrarCola() {
             pedido = aux.desencolar();
             pedido->leer();
         }
+        cout << endl;
         cout << "Clientes No Registrados\n";
         while (!aux2.esVacia()){
             pedido = aux2.desencolar();

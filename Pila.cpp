@@ -35,7 +35,6 @@ Pedido* Pila::desapilar() {
         pedido = nodo->valor;
         delete nodo;
     } else cout << "pila vacia" << endl;
-
     return pedido;
 }
 
