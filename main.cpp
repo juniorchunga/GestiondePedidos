@@ -93,8 +93,10 @@ int main() {
 
         cout << "1. Generar pedidos" << endl;
         cout << "2. Gestión de pedidos" << endl;
-        cout << "3. Reiniciar programa" << endl;
-        cout << "4. Salir del sistema" << endl;
+        cout << "3. Mostrar pedidos" << endl;
+        cout << "4. Mostrar pedidos erroneos" << endl;
+        cout << "5. Reiniciar programa" << endl;
+        cout << "6. Salir del sistema" << endl;
 
         cout << endl;
 
@@ -123,15 +125,25 @@ int main() {
                 gestorPrograma.encolar();
                 cout << endl;
                 cout << "Pasando los pedidos de la cola de espera a realización..." << endl;
-                gestorPrograma.clasificar();
+                //gestorPrograma.clasificar();
                 bucle = true;
                 break;
             case 3:
+                cout << "Mostrando pedidos en espera..." << endl;
+                gestorPrograma.mostrarCola();
+                bucle = true;
+                break;
+            case 4:
+                cout << "Mostrando pedidos erroneos..." << endl;
+                gestorPrograma.mostrarPila();
+                bucle = true;
+                break;
+            case 5:
                 cout << "Reiniciando..." << endl;
                 gestorPrograma.reiniciar();
                 bucle = true;
                 break;
-            case 4:
+            case 6:
                 bucle = false;
                 cout << "Saliendo del sistema..." <<endl;
                 cout << endl;

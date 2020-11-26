@@ -117,4 +117,25 @@ void gestor::reiniciar() {
 }
 
 
+void gestor::mostrarCola() {
+    Cola aux = cola_reg;
+    //Cola aux2 = cola_Noreg;
+    Pedido* pedido;
+    if(aux.esVacia()) {
+        cout << "No hay pedidos en espera\n";
+    } else {
+        while(!aux.esVacia()) {
+            pedido = aux.desencolar();
+            pedido->leer();
+        }
+    }
+
+}
+
+void gestor::mostrarPila() {}
+
+void gestor::mostrarLista() {}
+
+
+
 gestor::~gestor() {}

@@ -24,6 +24,11 @@ public:
     void tipo_cliente(Pedido* pedido);
     void reiniciar();
 
+    // Comprobaciones
+    void mostrarCola();
+    void mostrarPila();
+    void mostrarLista();
+
 
 
 private:
