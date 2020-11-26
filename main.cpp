@@ -12,7 +12,6 @@
 using namespace std;
 
 
-
 int main() {
 
 /*
@@ -156,7 +155,7 @@ int main() {
                 break;
             case 7:
                 //Salida del programa
-                cout << "Saliendo del sistema...\n" <<endl;
+                cout << "Saliendo del sistema...\n" << endl;
                 cout << endl;
 
                 cout << "Cerrando sesión\n" << endl;

@@ -15,20 +15,29 @@
 class gestor {
 public:
     gestor();
+
     ~gestor();
+
     int conteo();
+
     void encolar();
+
     void clasificar();
+
     void apilar();
+
     void alistar();
-    void tipo_cliente(Pedido* pedido);
+
+    void tipo_cliente(Pedido *pedido);
+
     void reiniciar();
 
     // Comprobaciones
     void mostrarCola();
-    void mostrarPila();
-    void mostrarLista();
 
+    void mostrarPila();
+
+    void mostrarLista();
 
 
 private:
@@ -38,7 +47,7 @@ private:
     Lista listaPedidos;
     Lista listaRegistrados;
     Lista listaNoRegistrados;
-    Pedido* valor;
+    Pedido *valor;
     int contador;
 
 

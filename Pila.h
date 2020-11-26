@@ -15,17 +15,25 @@ using namespace std;
 class Pila {
 public:
     Pila();
+
     ~Pila();
-    void apilar(Pedido* valor);
+
+    void apilar(Pedido *valor);
+
     int cima();
+
     void desapilar();
+
     void verPila();
+
     bool vacia();
-    void apilarPrioridad( Cola c);
+
+    void apilarPrioridad(Cola c);
+
     void dePilaACola(Cola cola);
 
 private:
-    NodoPila* ultimo;
+    NodoPila *ultimo;
 };
 
 

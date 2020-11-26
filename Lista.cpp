@@ -10,30 +10,29 @@ using namespace std;
 Lista::Lista() {}
 
 Lista::~Lista() {
-    NodoLista* aux;
-    while (ultimo){
-        aux=ultimo;
-        ultimo=ultimo ->siguiente;
+    NodoLista *aux;
+    while (ultimo) {
+        aux = ultimo;
+        ultimo = ultimo->siguiente;
         delete aux;
     }
 }
 
 void Lista::insertarLista(Pedido *valor) {
-    NodoLista* aux;
-    if(vacia()){
+    NodoLista *aux;
+    if (vacia()) {
         primero = new NodoLista(valor, NULL);
         ultimo = primero;
-    }
-    else {
+    } else {
         aux = new NodoLista(valor, NULL);
-        ultimo -> siguiente = aux;
+        ultimo->siguiente = aux;
         ultimo = aux;
     }
     cout << "Se ha insertado en la Lista" << endl;
 }
 
 void Lista::quitarLista() {
-    NodoLista* aux;
+    NodoLista *aux;
 
     cout << "Se ha quitado de la lista" << endl;
 
@@ -51,26 +50,26 @@ bool Lista::vacia() {
 
 void Lista::insertarLista_Registrados(Pedido *valor) {
     //Viendo si es registrado, colocarlo al principio de la lista
-    if (valor->tipoCliente()){
+    if (valor->tipoCliente()) {
         insertarLista(valor);
     }
 }
 
 void Lista::insertarLista_NoRegistrados(Pedido *valor) {
     //Viendo si no es registrado, colocar en x posición de la lista
-    if (valor->tipoCliente() == false){
+    if (valor->tipoCliente() == false) {
         insertarLista(valor);
     }
 }
 
 void Lista::ordenar() {
-    NodoLista* p = primero;
-    NodoLista* j;
-    while(p != NULL) {
+    NodoLista *p = primero;
+    NodoLista *j;
+    while (p != NULL) {
         j = p->siguiente;
-        while(j != NULL) {
-            if(p->valor->getTiempo() > j->valor->getTiempo()) {
-                Pedido* aux = j->valor;
+        while (j != NULL) {
+            if (p->valor->getTiempo() > j->valor->getTiempo()) {
+                Pedido *aux = j->valor;
                 j->valor = p->valor;
                 p->valor = aux;
             }
@@ -81,8 +80,8 @@ void Lista::ordenar() {
 }
 
 void Lista::juntarListas(Lista lista) {
-    NodoLista* p = lista.primero;
-    while(p != NULL) {
+    NodoLista *p = lista.primero;
+    while (p != NULL) {
         this->insertarLista(p->valor);
         p = p->siguiente;
     }
