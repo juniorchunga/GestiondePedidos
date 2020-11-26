@@ -47,25 +47,25 @@ void gestor::encolar() {
 }
 
 void gestor::clasificar() {
-    Pedido *valor;
+    Pedido* valor;
     int contador_registrados = 0;
     int contador_no_registrados = 0;
     //Cuando la cola no esté vacia
-    while (!cola_reg.esVacia() && contador_registrados != 4) {
+    while (!cola_reg.esVacia()) {
         valor = cola_reg.desencolar();
         if (valor->datoErroneo()) {
             pilaErroneos.apilar(valor);
         } else listaRegistrados.insertarLista(valor);
-        contador_registrados += 1;
+        //contador_registrados += 1;
     }
 
     //Cuando la cola de registrados ya esté vacia y la de no registrados no
-    while (!cola_Noreg.esVacia() && cola_reg.esVacia() && contador_no_registrados != 1) {
+    while (!cola_Noreg.esVacia() && cola_reg.esVacia()) {
         valor = cola_Noreg.desencolar();
         if (valor->datoErroneo()) {
             pilaErroneos.apilar(valor);
         } else listaNoRegistrados.insertarLista(valor);
-        contador_no_registrados += 1;
+        //contador_no_registrados += 1;
     }
 
     //Llamamos a la función alistar para que ordene y cree la lista final

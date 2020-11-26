@@ -41,13 +41,13 @@ Pedido* Cola::desencolar()
  * Elimina el primer elemento de la cola
  */
 {
-    Pedido *aux2;
+    Pedido* aux2;
     if(!frente){
         cout<<"Vacia, no es posible desencolar"<<endl;
     } else {
         NodoCola* aux = frente;
         frente = aux -> siguiente;
-        //aux2 = aux ->valor;
+        aux2 = aux ->valor;
         delete(aux);
         if (!frente) ultimo=NULL;
     }
