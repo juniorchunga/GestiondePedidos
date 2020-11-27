@@ -48,6 +48,7 @@ void gestor::encolar() {
     tipo_cliente(&pedido8);
     tipo_cliente(&pedido9);
     tipo_cliente(&pedido10);
+    cout << endl;
 
 }
 
@@ -154,6 +155,7 @@ void gestor::mostrarCola() {
             pedido->leer();
         }
     }
+    cout << endl;
 
 }
 
