@@ -53,18 +53,6 @@ void Pila::verPila() {
 }
 
 
-void Pila::dePilaACola(Cola cola) {
-    Pedido *ped;
-
-    ped = cola.desencolar();
-    if (ped->datoErroneo()) {
-        apilar(ped);
-    } else {
-        apilar(ped);
-    }
-
-}
-
 bool Pila::vacia() {
     if (!ultimo) {
         return true;

@@ -20,17 +20,9 @@ public:
 
     void apilar(Pedido *valor);
 
-    int cima();
-
     Pedido* desapilar();
 
-    void verPila();
-
     bool vacia();
-
-    void apilarPrioridad(Cola c);
-
-    void dePilaACola(Cola cola);
 
 private:
     NodoPila *ultimo;
