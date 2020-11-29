@@ -93,7 +93,7 @@ void gestor::clasificar() {
     while (!cola_reg.esVacia()) {
         valor = cola_reg.desencolar();
         if (valor->datoErroneo()) {
-            pilaRegistrados.apilar(valor);
+            pilaErroneos.apilar(valor);
         } else listaRegistrados.insertarLista(valor);
         //contador_registrados += 1;
     }
@@ -102,25 +102,17 @@ void gestor::clasificar() {
     while (!cola_Noreg.esVacia()) {
         valor = cola_Noreg.desencolar();
         if (valor->datoErroneo()) {
-            pilaNoRegistrados.apilar(valor);
+            pilaErroneos.apilar(valor);
         } else listaNoRegistrados.insertarLista(valor);
         //contador_no_registrados += 1;
     }
     cout << endl;
-
-    //Llamamos a la función apilar para que guarde en la pila final, con el orden de los registrados arriba y los no abajo
-    apilar();
 
 
     //Llamamos a la función alistar para que ordene y cree la lista final
     alistar();
     cout << "Clasificado\n" << endl;
 
-}
-
-void gestor::apilar(){
-    pilaErroneos = pilaNoRegistrados;
-    pilaNoRegistrados.apilar(pilaRegistrados.desapilar());
 }
 
 void gestor::alistar() {
@@ -146,7 +138,6 @@ void gestor::reiniciar() {      // Reinicia el programa
     } else {
         while (!pilaErroneos.vacia()) {
             pilaErroneos.desapilar();
-
             if (pilaErroneos.vacia()) cout << "Todos los aficionados han sido borrados de las pilas\n" << endl;
         }
     }
@@ -155,7 +146,6 @@ void gestor::reiniciar() {      // Reinicia el programa
     } else {
         while (!cola_reg.esVacia()) {
             cola_reg.desencolar();
-
             if (cola_reg.esVacia()) cout << "Todos los aficionados han sido borrados de las colas\n" << endl;
         }
     }
@@ -164,7 +154,6 @@ void gestor::reiniciar() {      // Reinicia el programa
     } else {
         while (!cola_Noreg.esVacia()) {
             cola_Noreg.desencolar();
-
             if (cola_Noreg.esVacia()) cout << "Todos los aficionados han sido borrados de las colas\n" << endl;
         }
     }

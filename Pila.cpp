@@ -38,7 +38,5 @@ Pedido* Pila::desapilar() {
 }
 
 bool Pila::vacia() {
-    if (!ultimo) {
-        return true;
-    } else return false;
+    return (ultimo == NULL);
 }

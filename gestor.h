@@ -43,8 +43,6 @@ private:
     Cola cola_reg;
     Cola cola_Noreg;
     Pila pilaErroneos;
-    Pila pilaRegistrados;
-    Pila pilaNoRegistrados;
     Lista listaPedidos;
     Lista listaRegistrados;
     Lista listaNoRegistrados;
