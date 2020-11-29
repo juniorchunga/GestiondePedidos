@@ -38,21 +38,6 @@ Pedido* Pila::desapilar() {
     return pedido;
 }
 
-void Pila::verPila() {
-    NodoPila *aux = ultimo;
-    if (!aux) {
-        cout << "Pila vacia" << endl;
-    } else {
-        cout << "Datos de la pila: " << endl;
-        while (aux) {
-            cout << aux->valor << ",";
-            aux = aux->siguiente;
-        }
-    }
-    cout << endl;
-}
-
-
 bool Pila::vacia() {
     if (!ultimo) {
         return true;
