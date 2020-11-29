@@ -71,10 +71,12 @@ void Lista::ordenar() {
 
 void Lista::juntarListas(Lista lista) {
     NodoLista *p = lista.primero;
-    while (p->siguiente != NULL) {
-        this->insertarLista(p->valor);
-        p = p->siguiente;
-    }
+    if (p != ultimo) {
+        while (p->siguiente != NULL) {
+            this->insertarLista(p->valor);
+            p = p->siguiente;
+        }
+    } else this->insertarLista(p->valor);
 }
 
 
