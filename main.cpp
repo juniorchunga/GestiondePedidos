@@ -1,80 +1,12 @@
 // Programa principal en el que se selecciona la opción
 
 #include <iostream>
-#include <fstream>
-#include <string>
-#include "Pedido.h"
-#include "Cola.h"
-#include "Pila.h"
-#include "Lista.h"
 #include "gestor.h"
 
 using namespace std;
 
 
 int main() {
-
-/*
-    ifstream fe;
-    string texto;
-    fe.open("pedidos.txt");
-
-    if (fe.fail()){
-        cout << "El archivo falla" << endl;
-    }
-    while (!fe.eof() && fe.good()){
-        fe >> texto;
-        cout << texto << endl;
-
-    }
-
-    fe.close();
-
-    */
-
-/*
-    string dato, str;
-    int t;
-
-    int posicion, cuantos= 0;
-    while(!fe.eof()){
-        getline(fe, str);
-        if (!str.empty()){
-            for(int i =1; i < 6; i++){
-                posicion = str.find("//");
-                dato = str.substr(0, posicion);
-
-                switch (i) {
-                    case 1: cout << "Descripción: " << dato << endl;
-                        break;
-                    case 2:
-                        cout << "Nombre: "<< dato << endl;
-                        break;
-                    case 3:
-                        cout << "Dirección: "<< dato << endl;
-                        break;
-                    case 4:
-                        cout << "Tipo de Cliente: "<< dato << endl;
-                        break;
-                    case 5:
-                        cout << "Número de tarjeta: "<< dato << endl;
-                        break;
-                    case 6:
-                        cout << "Tiempo: " << endl;
-                        break;
-                    default:
-                        break;
-                }
-                str.erase(0, posicion+2);
-            }
-            dato = str.substr(0,1);
-            t=atoi(dato.c_str());
-            cout << "Tiempo: " << t << endl;
-        }
-        fe.close();
-    }
-*/
-
 
     //Menú
     gestor gestorPrograma;
@@ -100,18 +32,6 @@ int main() {
 
         switch (opcion) {
             case 1:
-                //Parte de leer el fichero
-                /*char cadena[8];
-                ifstream fichero("Users/juniorchunga/Desktop/FicheroC++.txt");
-
-                while (!fichero.eof()) {
-                    fichero >> cadena;
-                    cout << cadena << endl;
-                }
-                fichero.close();
-
-                bucle = true;
-                 */
 
                 //Se supone que se lee los pedidos del fichero
                 cout << "Creando pedidos...\n" << endl;

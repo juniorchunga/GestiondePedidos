@@ -16,6 +16,17 @@ Pedido pedido7("Apple Watch Series 6", "Calle Nuestra Sr. Fátima", "Maria del C
 Pedido pedido8("Televisión Smart TV LG", "Plaza de Castilla", "Mia", "NOREG", 23104929059203, 9);
 Pedido pedido9("Macbook Pro 13'", "Calle Atocha 25", "Antonio Machado", "REG", 582949820450204, 4);
 Pedido pedido10("Portatil Gaming MSI", "Ronda de Barcelona", "Cristina", "REG", 4920959205903, 3);
+Pedido pedido11("Nintendo DS", "Paseo de la Dirección 11", "Olga", "NOREG", 402945020402, 7);
+Pedido pedido12("PlayStation 5", "Calle Princesa 11", "Teresa", "REG", 492945029592, 2);
+Pedido pedido13("Fifa 21", "Calle Lopez de Hoyos", "Pilar", "REG", 40289402048929, 4);
+Pedido pedido14("Televisión Smart TV Samsung 4K", "Paseo de la Castellana 300", "Fernando", "REG", 10491049204020, 5);
+Pedido pedido15("Reloj Despertador Thomson", "Calle Sancho Davila", "Jaime", "REG",40285920402103, 4);
+Pedido pedido16("Monitor Xiaomi 27'", "Calle de Juan del Risco", "Pedro", "NOREG", 1049204022902, 6);
+Pedido pedido17("HomePod Apple", "Calle de Palencia", "Rosa", "NOREG", 391049205920502, 6);
+Pedido pedido18("Auricolares Inalambricos BOSE","Calle Raimundo Fernandez Villaverde", "Emilio","NOREG", 4929920450294020, 9);
+Pedido pedido19("Altavoces BOSE", "Calle de Aravaca", "Luis", "NOREG", 45204592589294, 10);
+Pedido pedido20("Repuesto pastilla térmica", "Av. Reyes Católicos", "Andrea", "REG", 492092040294, 4);
+Pedido pedido21("Procesador Intel i7 10450U", "Calle de Santa Cruz de Marcenado", "Elena", "REG", 3019492040204, 1);
 
 
 int gestor::conteo() {
@@ -30,6 +41,17 @@ int gestor::conteo() {
     pedido8.leer();
     pedido9.leer();
     pedido10.leer();
+    pedido11.leer();
+    pedido12.leer();
+    pedido13.leer();
+    pedido14.leer();
+    pedido15.leer();
+    pedido16.leer();
+    pedido17.leer();
+    pedido18.leer();
+    pedido19.leer();
+    pedido20.leer();
+    pedido21.leer();
     cout << endl;
     return contador;
 }
@@ -48,6 +70,17 @@ void gestor::encolar() {
     tipo_cliente(&pedido8);
     tipo_cliente(&pedido9);
     tipo_cliente(&pedido10);
+    tipo_cliente(&pedido11);
+    tipo_cliente(&pedido12);
+    tipo_cliente(&pedido13);
+    tipo_cliente(&pedido14);
+    tipo_cliente(&pedido15);
+    tipo_cliente(&pedido16);
+    tipo_cliente(&pedido17);
+    tipo_cliente(&pedido18);
+    tipo_cliente(&pedido19);
+    tipo_cliente(&pedido20);
+    tipo_cliente(&pedido21);
     cout << endl;
 
 }
