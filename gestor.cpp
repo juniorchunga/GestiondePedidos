@@ -6,7 +6,7 @@
 
 gestor::gestor() {}
 
-Pedido pedido1("","Calle Luna", "Junior", "REG", 4010402104, 4);
+Pedido pedido1("Ordenador","Calle Luna", "Junior", "REG", 4010402104, 4);
 Pedido pedido2("Teclado", "Calle Barcelona", "Francisco", "NOREG", 552040205020, 9);
 Pedido pedido3("Ordenador Dell", "Calle Preciados", "Alberto", "REG", 30502050250, 5);
 Pedido pedido4("Monitor", "Calle Alcala", "Adriana", "NOREG", 402492045020, 8);
@@ -89,25 +89,25 @@ void gestor::clasificar() {
     Pedido* valor;
     int contador_registrados = 0;
     int contador_no_registrados = 0;
-    //Cuando la cola no esté vacia
-    while (!cola_reg.esVacia()) {
-        valor = cola_reg.desencolar();
-        if (valor->datoErroneo()) {
-            pilaErroneos.apilar(valor);
-        } else listaRegistrados.insertarLista(valor);
-        //contador_registrados += 1;
-    }
 
-    //Cuando la cola de registrados ya esté vacia y la de no registrados no
-    while (!cola_Noreg.esVacia()) {
+    //Cuando la cola no esté vacia
+    while (!cola_Noreg.esVacia() && contador_no_registrados != 1) {
         valor = cola_Noreg.desencolar();
         if (valor->datoErroneo()) {
             pilaErroneos.apilar(valor);
         } else listaNoRegistrados.insertarLista(valor);
-        //contador_no_registrados += 1;
+        contador_no_registrados += 1;
     }
-    cout << endl;
 
+    while (!cola_reg.esVacia() && contador_registrados != 3) {
+        valor = cola_reg.desencolar();
+        if (valor->datoErroneo()) {
+            pilaErroneos.apilar(valor);
+        } else listaRegistrados.insertarLista(valor);
+        contador_registrados += 1;
+    }
+
+    cout << endl;
 
     //Llamamos a la función alistar para que ordene y cree la lista final
     alistar();
@@ -134,6 +134,7 @@ void gestor::tipo_cliente(Pedido *pedido) {
 
 
 void gestor::reiniciar() {      // Reinicia el programa
+
     if (pilaErroneos.vacia()) {
     } else {
         while (!pilaErroneos.vacia()) {
