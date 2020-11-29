@@ -10,12 +10,14 @@ using namespace std;
 Lista::Lista() {}
 
 Lista::~Lista() {
+    /*
     NodoLista *aux;
-    while (ultimo) {
-        aux = ultimo;
-        ultimo = ultimo->siguiente;
+    while (primero) {
+        aux = primero;
+        primero = primero->siguiente;
         delete aux;
     }
+     */
 }
 
 void Lista::insertarLista(Pedido *valor) {
