@@ -16,9 +16,13 @@ public:
     ~Cola();
 
     void encolar(Pedido* v);
+
     Pedido* desencolar();
+
     Pedido* primero();
+
     bool esVacia();
+
     void verCola(Cola());
 
     void clasificar(Pedido* v, Cola cola1, Cola cola2);

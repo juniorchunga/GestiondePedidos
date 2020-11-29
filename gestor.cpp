@@ -60,7 +60,7 @@ void gestor::clasificar() {
     while (!cola_reg.esVacia()) {
         valor = cola_reg.desencolar();
         if (valor->datoErroneo()) {
-            pilaErroneos.apilar(valor);
+            pilaRegistrados.apilar(valor);
         } else listaRegistrados.insertarLista(valor);
         //contador_registrados += 1;
     }
@@ -69,15 +69,24 @@ void gestor::clasificar() {
     while (!cola_Noreg.esVacia()) {
         valor = cola_Noreg.desencolar();
         if (valor->datoErroneo()) {
-            pilaErroneos.apilar(valor);
+            pilaNoRegistrados.apilar(valor);
         } else listaNoRegistrados.insertarLista(valor);
         //contador_no_registrados += 1;
     }
     cout << endl;
 
+    //Llamamos a la función apilar para que guarde en la pila final, con el orden de los registrados arriba y los no abajo
+    apilar();
+
+
     //Llamamos a la función alistar para que ordene y cree la lista final
     alistar();
 
+}
+
+void gestor::apilar(){
+    pilaErroneos = pilaNoRegistrados;
+    pilaNoRegistrados.apilar(pilaRegistrados.desapilar());
 }
 
 void gestor::alistar() {

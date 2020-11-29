@@ -24,6 +24,8 @@ public:
 
     void clasificar();
 
+    void apilar();
+
     void alistar();
 
     void tipo_cliente(Pedido *pedido);
@@ -37,11 +39,12 @@ public:
 
     void mostrarLista();
 
-
 private:
     Cola cola_reg;
     Cola cola_Noreg;
     Pila pilaErroneos;
+    Pila pilaRegistrados;
+    Pila pilaNoRegistrados;
     Lista listaPedidos;
     Lista listaRegistrados;
     Lista listaNoRegistrados;

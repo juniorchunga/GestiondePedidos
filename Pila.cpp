@@ -23,7 +23,6 @@ void Pila::apilar(Pedido *valor) {
     NodoPila *nuevo;
     nuevo = new NodoPila(valor, ultimo);
     ultimo = nuevo;
-    cout << "Apilado" << endl;
 }
 
 Pedido* Pila::desapilar() {
@@ -34,7 +33,7 @@ Pedido* Pila::desapilar() {
         ultimo = nodo->siguiente;
         pedido = nodo->valor;
         delete nodo;
-    } else cout << "pila vacia" << endl;
+    }
     return pedido;
 }
 
