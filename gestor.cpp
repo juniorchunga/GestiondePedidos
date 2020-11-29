@@ -66,7 +66,7 @@ void gestor::clasificar() {
     }
 
     //Cuando la cola de registrados ya esté vacia y la de no registrados no
-    while (!cola_Noreg.esVacia() && cola_reg.esVacia()) {
+    while (!cola_Noreg.esVacia()) {
         valor = cola_Noreg.desencolar();
         if (valor->datoErroneo()) {
             pilaErroneos.apilar(valor);

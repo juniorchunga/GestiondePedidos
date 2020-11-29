@@ -15,17 +15,12 @@ public:
     void insertarLista(Pedido* valor);
     void quitarLista();
     bool vacia();
-    void deCola_a_Lista(Cola cola);
-    void insertarLista_Registrados(Pedido* valor);
-    void insertarLista_NoRegistrados(Pedido* valor);
     void ordenar();
     void juntarListas(Lista lista);
     void mostrarLista();
 
-
-
-
 private:
+
     NodoLista* primero;
     NodoLista* ultimo;
 };

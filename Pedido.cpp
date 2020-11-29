@@ -9,7 +9,7 @@
 using namespace std;
 
 
-Pedido::Pedido(string descripcion, string nombre, string direccion, string tipo_cliente, long num_tarjeta, int tiempo) {
+Pedido::Pedido(string descripcion, string direccion, string nombre, string tipo_cliente, long num_tarjeta, int tiempo) {
     this->descripcion = descripcion;
     this->nombre = nombre;
     this->direccion = direccion;
@@ -19,16 +19,8 @@ Pedido::Pedido(string descripcion, string nombre, string direccion, string tipo_
 }
 
 
-/*
-int Pedido::tiempoAleatorio(int tiempo) {
-    tiempo = 0;
-    tiempo = rand()%10+ 1;
-    return tiempo;
-}
-*/
-
 void Pedido::leer() {
-    cout << "Pedido: " << descripcion << ", Cliente: " << nombre << ", Dirección: " << direccion
+    cout << "Pedido: " << descripcion << ", Dirección: " << direccion << ", Nombre: " << nombre
          << ", tiempo de duración: " << tiempo << endl;
 
 }

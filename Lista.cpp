@@ -44,29 +44,12 @@ void Lista::quitarLista() {
 
 }
 
-void Lista::deCola_a_Lista(Cola cola) {
-    //Función de la salida del Pedido de Cola a la Lista
-
-}
 
 bool Lista::vacia() {
     //Comprobar si la lista está vacia
     return primero == NULL;
 }
 
-void Lista::insertarLista_Registrados(Pedido *valor) {
-    //Viendo si es registrado, colocarlo al principio de la lista
-    if (valor->tipoCliente()) {
-        insertarLista(valor);
-    }
-}
-
-void Lista::insertarLista_NoRegistrados(Pedido *valor) {
-    //Viendo si no es registrado, colocar en x posición de la lista
-    if (valor->tipoCliente() == false) {
-        insertarLista(valor);
-    }
-}
 
 void Lista::ordenar() {
     NodoLista *p = primero;
@@ -85,13 +68,15 @@ void Lista::ordenar() {
     }
 }
 
+
 void Lista::juntarListas(Lista lista) {
     NodoLista *p = lista.primero;
-    while (p != NULL) {
+    while (p->siguiente != NULL) {
         this->insertarLista(p->valor);
         p = p->siguiente;
     }
 }
+
 
 void Lista::mostrarLista() {
     NodoLista* aux;
