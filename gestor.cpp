@@ -6,7 +6,7 @@
 
 gestor::gestor() {}
 
-Pedido pedido1("Ordenador", "Calle Luna", "Junior", "REG", 4010402104, 4);
+Pedido pedido1("","Calle Luna", "Junior", "REG", 4010402104, 4);
 Pedido pedido2("Teclado", "Calle Barcelona", "Francisco", "NOREG", 552040205020, 9);
 Pedido pedido3("Ordenador Dell", "Calle Preciados", "Alberto", "REG", 30502050250, 5);
 Pedido pedido4("Monitor", "Calle Alcala", "Adriana", "NOREG", 402492045020, 8);
@@ -114,6 +114,7 @@ void gestor::clasificar() {
 
     //Llamamos a la función alistar para que ordene y cree la lista final
     alistar();
+    cout << "Clasificado\n" << endl;
 
 }
 

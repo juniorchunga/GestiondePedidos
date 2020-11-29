@@ -30,7 +30,6 @@ void Lista::insertarLista(Pedido *valor) {
         ultimo->siguiente = aux;
         ultimo = aux;
     }
-    cout << "Se ha insertado en la Lista" << endl;
 }
 
 void Lista::quitarLista() {
