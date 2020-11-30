@@ -91,7 +91,7 @@ void gestor::clasificar() {
     int contador_no_registrados = 0;
 
     //Cuando la cola no esté vacia
-    while (!cola_Noreg.esVacia() && contador_no_registrados != 1) {
+    while (!cola_Noreg.esVacia() && contador_no_registrados != 2) {
         valor = cola_Noreg.desencolar();
         if (valor->datoErroneo()) {
             pilaErroneos.apilar(valor);
