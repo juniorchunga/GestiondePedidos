@@ -115,10 +115,13 @@ void Arbol::insertarNodoBB(NodoArbol *&ab, Pedido *v){
     }
 }
 ///////////////ARBOL VACIO///////////////////////////
-
+/*
 bool Arbol::esVacio(NodoArbol *nodo){
-    return raiz == NULL; //compara la raiz del arbol con el NULL, si se cumple la igualdad, entonces nos devuelve true (el arbol está vacio) y si no, false
+    if(raiz == NULL){
+        return true;
+    } else return false;
 }
+*/
 ////////////////////INSERTAR NODO EN ARBOL BINARIO///////////////////////////
 void Arbol::insertarN(NodoArbol *&ab,Pedido *v){ //pasamos un puntero a nodo arbol por referencia, ya que vamos a estar modificando el contenido de nuestro arbol
     if(ab==NULL){ //si el nodo es null, entonces

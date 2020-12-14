@@ -14,7 +14,7 @@ Lista::~Lista() {
     while (primero) {
         aux = primero;
         primero = primero->siguiente;
-        delete aux;
+        //delete aux;
     }
 }
 
