@@ -8,6 +8,7 @@
 #include "Cola.h"
 #include "Pila.h"
 #include "Lista.h"
+#include "Arbol.h"
 #include "Pedido.h"
 
 // Programa en el que vendrá el núcleo del programa
@@ -39,6 +40,8 @@ public:
 
     void mostrarLista();
 
+    void mostrarArbol();
+
 private:
     Cola cola_reg;
     Cola cola_Noreg;
@@ -46,6 +49,7 @@ private:
     Lista listaPedidos;
     Lista listaRegistrados;
     Lista listaNoRegistrados;
+    Arbol arbolBusqueda;
     Pedido *valor;
     int contador;
 
