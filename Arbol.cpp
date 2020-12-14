@@ -9,7 +9,6 @@ using namespace std;
 
 Arbol::Arbol() {
     this->raiz = NULL;
-    this->actual = NULL;
 }
 
 //////////////////////ALTURA ARBOL///////////////////////////////////////

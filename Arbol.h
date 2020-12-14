@@ -26,8 +26,6 @@ public:
 
 private:
     NodoArbol raiz = NULL;
-    NodoArbol actual = NULL;
-
 
 };
 
